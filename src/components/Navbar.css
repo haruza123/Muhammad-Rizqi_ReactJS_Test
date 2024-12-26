@@ -1,0 +1,132 @@
+/* Navbar */
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.5);
+    color: black;
+    padding: 0 20px;
+    z-index: 9999;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/* Header untuk MyApp dan Hamburger */
+.navbar-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+
+/* Logo MyApp */
+.navbar-logo {
+    font-size: 20px;
+    font-weight: bold;
+    color: black;
+    display: none; /* Default disembunyikan */
+}
+
+
+
+/* Tampilkan MyApp di layar kecil */
+@media (max-width: 768px) {
+    .navbar-logo {
+        display: block;
+    }
+}
+
+/* Hamburger menu button */
+.hamburger-menu {
+    display: none; /* Tidak terlihat di layar besar */
+    flex-direction: column;
+    gap: 5px;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+.hamburger-menu .bar {
+    width: 25px;
+    height: 3px;
+    background-color: white;
+    border-radius: 2px;
+}
+
+/* Navbar menu */
+.navbar-menu {
+    list-style-type: none;
+    display: flex;
+    gap: 20px;
+    margin: 0;
+    padding: 0;
+    align-items: center;
+    transition: all 0.3s ease;
+}
+
+/* Navbar menu responsif */
+@media (max-width: 768px) {
+    .hamburger-menu {
+        display: flex; /* Tampilkan tombol hamburger di layar kecil */
+    }
+
+    .navbar-menu {
+        position: absolute;
+        top: 50px;
+        left: 0;
+        width: 100%;
+        flex-direction: column;
+        background-color: rgba(255, 255, 255, 0.5);
+        color: grey;
+        padding: 5px 0;
+        display: none; /* Default disembunyikan */
+        opacity: 0;
+        visibility: hidden;
+        transition: all 0.3s ease;
+    }
+
+    .navbar-menu.open {
+        display: flex;
+        opacity: 1;
+        visibility: visible;
+    }
+
+    .navbar-menu li {
+        text-align: center;
+        margin: 5px 0; /* Jarak antar item lebih dekat */
+    }
+}
+
+/* Gaya untuk tautan dan tombol */
+.navbar ul li a,
+.navbar ul li button {
+    text-decoration: none;
+    color: black;
+    padding: 8px 15px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    font-size: 14px;
+    line-height: 1;
+    border: 1px solid transparent;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+/* Tombol Logout */
+.navbar ul li button {
+    background-color: #dc3545;
+    color: white;
+    cursor: pointer;
+    border: none;
+}
+
+.navbar ul li a:hover,
+.navbar ul li button:hover {
+    background-color: #0056b3;
+    color: gray;
+    border-color: #0056b3;
+}

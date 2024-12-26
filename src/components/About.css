@@ -1,0 +1,156 @@
+/* Perbaiki jarak navbar dengan about-container */
+.about-container {
+    max-width: 900px;
+    margin: 70px auto; 
+    padding: 20px;
+    font-family: Arial, sans-serif;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    margin-top: 70px;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden; 
+}
+
+html {
+    overflow-x: hidden; 
+}
+
+.profile-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 30px;
+    padding: 20px;
+    background-color: #007bff;
+    color: white;
+    border-radius: 10px;
+    flex-wrap: wrap;
+}
+
+.profile-image {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    margin-right: 20px;
+    border: 3px solid white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 10px;
+}
+
+.profile-info {
+    flex: 1;
+    text-align: center;
+}
+
+.profile-info h1 {
+    font-size: 24px;
+    margin: 0;
+}
+
+.profile-info p {
+    font-size: 16px;
+    margin: 5px 0;
+}
+
+.profile-content .section {
+    margin-bottom: 20px;
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.profile-content .section h2 {
+    font-size: 20px;
+    color: #333;
+    border-bottom: 2px solid #007bff;
+    padding-bottom: 5px;
+    margin-bottom: 15px;
+}
+
+.profile-content ul {
+    list-style-type: disc;
+    margin-left: 20px;
+    color: #555;
+    font-size: 16px;
+}
+
+.profile-content ul li {
+    margin-bottom: 10px;
+}
+
+.profile-content ul li strong {
+    color: #007bff;
+}
+
+.profile-content ul li small {
+    font-size: 14px;
+    color: #999;
+}
+
+.profile-content a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+.profile-content a:hover {
+    text-decoration: underline;
+}
+
+/* Media Queries untuk Responsivitas */
+@media (max-width: 768px) {
+    .about-container {
+        padding: 15px;
+    }
+
+    .profile-header {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .profile-image {
+        margin: 0 auto 15px auto;
+    }
+
+    .profile-info h1 {
+        font-size: 20px;
+    }
+
+    .profile-info p {
+        font-size: 14px;
+    }
+
+    .profile-content .section {
+        padding: 15px;
+    }
+
+    .profile-content .section h2 {
+        font-size: 18px;
+    }
+
+    .profile-content ul {
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 480px) {
+    .profile-info h1 {
+        font-size: 18px;
+    }
+
+    .profile-content ul {
+        margin-left: 10px;
+    }
+
+    .profile-content ul li {
+        font-size: 12px;
+    }
+
+    .profile-content .section h2 {
+        font-size: 16px;
+    }
+}

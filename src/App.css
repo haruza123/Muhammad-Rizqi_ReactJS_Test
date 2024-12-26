@@ -1,0 +1,29 @@
+main {
+  padding-top: 70px;
+  padding-bottom: 70px;
+  margin: 0;
+  min-height: calc(100vh - 120px);
+  box-sizing: border-box;
+}
+
+footer {
+  text-align: center;
+  padding: 20px;
+  background-color: hidden;
+  color: #6c757d;
+  position: relative;
+  bottom: 0;
+  width: 100%;
+  border: none;
+}
+
+@media (max-width: 768px) {
+  footer {
+    padding: 15px;
+    font-size: 14px;
+  }
+
+  main {
+    padding-bottom: 80px;
+  }
+}

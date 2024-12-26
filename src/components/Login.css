@@ -1,0 +1,106 @@
+/* Background dengan gradasi dan animasi */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background: linear-gradient(90deg, #00a2ff, #00ff2f);
+    background-size: 400% 400%;
+    animation: gradient-animation 10s ease infinite;
+    color: #333;
+    min-height: 100vh; /* Pastikan tinggi penuh */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow-x: hidden; /* Hilangkan scroll horizontal */
+}
+
+/* Animasi untuk background */
+@keyframes gradient-animation {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+/* Container untuk Halaman Login */
+.login-container {
+    width: 90%;
+    max-width: 350px;
+    margin: auto; /* Pusatkan secara vertikal dan horizontal */
+    padding: 30px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    background: #ffffff;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    box-sizing: border-box;
+}
+
+/* Grup input form */
+.form-group {
+    margin-bottom: 20px;
+    position: relative;
+}
+
+input {
+    width: 100%; /* Maksimalkan lebar input */
+    padding: 12px 10px;
+    margin: 5px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    outline: none;
+    box-sizing: border-box;
+    transition: all 0.3s ease;
+}
+
+input:focus {
+    border-color: #007bff;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+}
+
+/* Tombol login */
+.btn {
+    padding: 12px 20px;
+    border: none;
+    background-color: #007bff;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    width: 100%;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #0056b3;
+    transform: translateY(-2px);
+}
+
+/* Pesan validasi */
+.validation-error {
+    color: red;
+    font-size: 14px;
+    margin-top: -10px;
+    margin-bottom: 10px;
+}
+
+/* Responsif */
+@media (max-width: 500px) {
+    .login-container {
+        padding: 20px;
+    }
+
+    input {
+        font-size: 14px;
+    }
+
+    .btn {
+        font-size: 14px;
+    }
+}
